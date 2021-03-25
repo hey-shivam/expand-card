@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Akaya Telivigala', cursive;
+    margin: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 90vw;
+    color: white;
+}
+
+.panel{
+    border-radius: 12px;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    flex: 0.5;
+    transition: flex 0.7s ease-in;   
+}
+
+.panel h1{
+    position: absolute;
+    font-size: 29px;
+    bottom: 30px;
+    left: 30px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex : 5;
+}
+
+.panel.active h1{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.first{
+    background-image: url("./img/first.jpg");
+    opacity: 1px;
+}
+
+.second{
+    background-image: url("./img/second.jpg");
+}
+
+.third{
+    background-image: url("./img/third.jpg");
+}
+
+.fourth{
+    background-image: url("/img/fourth.jpg");
+}
+
+.fifth{
+    background-image: url("./img/fifth.jpg");
+}
+
+@media(max-width : 500px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(3),
+    .panel:nth-of-type(4){
+        display: none;
+    }
+}
